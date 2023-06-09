@@ -7,7 +7,8 @@ function makeButtons(){
     document.getElementById("theGrid").appendChild(btn);
     document.getElementById(i).onclick = thisClick
   }//end loop  
-}
+  document.getElementById(pickRandomBtn()).style.backgroundColor = "green"
+}//end makeButtons
 function pickRandomBtn(){
   var rndNum = Math.random()*100
   rndNum = Math.floor(rndNum)
@@ -15,7 +16,8 @@ function pickRandomBtn(){
 }//end pickRandomBtn
 var thisClick = function(){
   var thisBtn = pickRandomBtn()
-  document.getElementById(thisBtn).style.backgroundColor = "green"
-  document.getElementById(this.id).style.backgroundColor = "black"
-  
+  if(document.getElementById(this.id).style.backgroundColor == "green"){
+     document.getElementById(thisBtn).style.backgroundColor = "green"
+      document.getElementById(this.id).style.backgroundColor = "black"
+  }//end if  
 }//end thisClick
