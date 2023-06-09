@@ -11,9 +11,11 @@ function makeButtons(){
 function pickRandomBtn(){
   var rndNum = Math.random()*100
   rndNum = Math.floor(rndNum)
-  console.log(rndNum)
+  return rndNum;
 }//end pickRandomBtn
 var thisClick = function(){
-  pickRandomBtn()
-  document.getElementById(this.id).style.backgroundColor = "green"
+  var thisBtn = pickRandomBtn()
+  document.getElementById(thisBtn).style.backgroundColor = "green"
+  document.getElementById(this.id).style.backgroundColor = "black"
+  
 }//end thisClick
