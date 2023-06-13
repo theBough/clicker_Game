@@ -1,3 +1,6 @@
+var countElement = document.getElementById("myCounter")
+var count = 0;
+
 function makeButtons(){
   for(i = 0 ; i<100 ; i++){
     var btn  = document.createElement("button")
@@ -19,5 +22,7 @@ var thisClick = function(){
   if(document.getElementById(this.id).style.backgroundColor == "green"){
      document.getElementById(thisBtn).style.backgroundColor = "green"
       document.getElementById(this.id).style.backgroundColor = "black"
+      count += 1;
+      countElement.textContent = "Count: " + count;
   }//end if  
 }//end thisClick
